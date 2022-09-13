@@ -2,7 +2,7 @@
 
 defined('VG_ACCESS') or die('Access denied');
 
-const SITE_URL = 'http://phpframe';
+const SITE_URL = 'http://phpajs';
 const PATH = '/';
 
 const HOST = 'localhost';

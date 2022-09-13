@@ -23,12 +23,15 @@ const USER_CSS_JS = [
     'scripts' => []
 ];
 
-use xxxcc\RouteException;
+
+//use core\base\exceptions\RouteException;     // Will the file be used in its own?
 
 function autoloadMainClasses($class_name)
 {
-    $class_name = str_replace('\\', '/', $class_name);
+//    $class_name = str_replace('\\', '/', $class_name);   // need or not
     if (!@include_once $class_name . '.php') {
-        throw new RouteException('invalid filename to connect - '. $class_name);
+        throw new RouteException('invalid filename to connect - ' . $class_name);
     }
 }
+
+spl_autoload_register('autoloadMainClasses');
